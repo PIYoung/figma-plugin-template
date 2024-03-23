@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+HUSKY_DIR="$(dirname -- "$0")/_/husky.sh"
+
+readonly HUSKY_DIR
+
+. "$HUSKY_DIR"
+
+echo "🔍 Linting commit-msg..."
+npx --no-install commitlint --edit $1
